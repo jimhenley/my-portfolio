@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="welcome">Welcome to My Portfolio</h1>
+        <p class="tagline">Learning DevOps, one deployment at a time!</p>
+    </header>
+    
+    <main>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm learning DevOps and this is my first automated deployment.</p>
+            <p>Current deployment version: <span id="version">1.0.0</span></p>
+            <p>Deployed at: <span id="deploy-time"></span></p>
+        </section>
+        
+        <section class="skills">
+            <h2>Skills I'm Learning</h2>
+            <ul>
+                <li>Git & GitHub</li>
+                <li>Docker</li>
+                <li>CI/CD with GitHub Actions</li>
+                <li>Azure Cloud Services</li>
+            </ul>
+        </section>
+        
+        <button id="theme-toggle">Toggle Dark Mode</button>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 My Portfolio. Automatically deployed via GitHub Actions!</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
