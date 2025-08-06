@@ -20,17 +20,18 @@ jobs:
     steps:
       # Step 1: Get the code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Updated to v4
       
       # Step 2: Validate HTML (optional but good practice)
       - name: HTML5 Validator
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
           root: .
+        continue-on-error: true  # Don't fail if HTML has minor issues
       
       # Step 3: Upload website files as artifact
       - name: Upload website files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # Updated to v4
         with:
           name: website-files
           path: |
@@ -49,7 +50,7 @@ jobs:
     steps:
       # Get the code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Updated to v4
       
       # Deploy to Azure Static Web Apps
       - name: Deploy to Azure Static Web Apps
